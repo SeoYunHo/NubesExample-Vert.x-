@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.boxfox</groupId>
+    <artifactId>vertx-injector</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <vertx.version>3.4.1</vertx.version>
+        <netty.version>4.1.5.Final</netty.version>
+    </properties>
+
+<dependencies>
+    <!-- https://mvnrepository.com/artifact/com.massisframework/nubes -->
+    <dependency>
+        <groupId>com.massisframework</groupId>
+        <artifactId>nubes</artifactId>
+        <version>1.4.6</version>
+    </dependency>
+
+    <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>vertx-core</artifactId>
+        <version>${vertx.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>vertx-web</artifactId>
+        <version>${vertx.version}</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.vertx/vertx-lang-groovy -->
+    <dependency>
+        <groupId>io.vertx</groupId>
+        <artifactId>vertx-lang-groovy</artifactId>
+        <version>${vertx.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-transport</artifactId>
+        <version>${netty.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-resolver -->
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-resolver</artifactId>
+        <version>${netty.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-resolver-dns -->
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-resolver-dns</artifactId>
+        <version>${netty.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-handler -->
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-handler</artifactId>
+        <version>${netty.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-common -->
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-common</artifactId>
+        <version>${netty.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-codec-http2 -->
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-codec-http2</artifactId>
+        <version>${netty.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-codec-http -->
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-codec-http</artifactId>
+        <version>${netty.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-codec -->
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-codec</artifactId>
+        <version>${netty.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-codec-dns -->
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-codec-dns</artifactId>
+        <version>${netty.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-buffer -->
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-buffer</artifactId>
+        <version>${netty.version}</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>6.0.6</version>
+    </dependency>
+
+
+</dependencies>
+
+
+</project>
