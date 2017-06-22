@@ -39,11 +39,10 @@ public class PostController {
 				jsonArray.add(jo);
 				System.out.println(jo.toString());
 			}
-			ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(200)
-					.end(jsonArray.toString());
+			ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(200).end(jsonArray.toString());
 			ctx.response().close();
 		} catch (SQLException e) {
-			ctx.response().setStatusCode(500).end();
+			ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(500).end();
 			ctx.response().close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -75,7 +74,8 @@ public class PostController {
 			}
 		} catch (SQLException e) {
 			jo.put("success", false);
-			ctx.response().setStatusCode(500).end(jo.toString());
+			ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(500)
+					.end(jo.toString());
 			ctx.response().close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -106,7 +106,8 @@ public class PostController {
 			}
 		} catch (SQLException e) {
 			jo.put("success", false);
-			ctx.response().setStatusCode(500).end(jo.toString());
+			ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(500)
+					.end(jo.toString());
 			ctx.response().close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -135,7 +136,8 @@ public class PostController {
 			}
 		} catch (SQLException e) {
 			jo.put("success", false);
-			ctx.response().setStatusCode(500).end(jo.toString());
+			ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(500)
+					.end(jo.toString());
 			ctx.response().close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -176,7 +178,8 @@ public class PostController {
 			}
 		} catch (SQLException e) {
 			jo.put("success", false);
-			ctx.response().setStatusCode(500).end(jo.toString());
+			ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(500)
+					.end(jo.toString());
 			ctx.response().close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

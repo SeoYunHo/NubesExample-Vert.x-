@@ -44,6 +44,7 @@ public class AccountController {
 						"insert into session values('" + sessionKey + "','" + id + "','" + password + "');");
 				if (result == 1) {
 					session.put("sessionKey", sessionKey);
+					ctx.setSession(session);
 					jo.put("success", true);
 					ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(201)
 							.end(jo.toString());
@@ -62,7 +63,8 @@ public class AccountController {
 			}
 		} catch (SQLException e) {
 			jo.put("success", false);
-			ctx.response().setStatusCode(500).end(jo.toString());
+			ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(500)
+					.end(jo.toString());
 			ctx.response().close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -95,7 +97,8 @@ public class AccountController {
 			}
 		} catch (SQLException e) {
 			jo.put("success", false);
-			ctx.response().setStatusCode(500).end(jo.toString());
+			ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(500)
+					.end(jo.toString());
 			ctx.response().close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

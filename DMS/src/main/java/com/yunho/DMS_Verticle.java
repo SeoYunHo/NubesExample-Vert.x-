@@ -47,7 +47,8 @@ public class DMS_Verticle extends AbstractVerticle {
 				if (event.succeeded()) {
 					Router router = event.result();
 					router.route().handler(CookieHandler.create());
-			        //router.route().handler(SessionHandler.create(LocalSessionStore.create(vertx)).setNagHttps(false));
+					router.route().handler(RequestSecurePreprocessor.create());
+					// router.route().handler(SessionHandler.create(LocalSessionStore.create(vertx)).setNagHttps(false));
 					router.route().handler(BodyHandler.create());
 					server.requestHandler(router::accept);
 					server.listen(options.getPort());

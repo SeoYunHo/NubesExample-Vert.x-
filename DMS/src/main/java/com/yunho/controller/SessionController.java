@@ -40,7 +40,8 @@ public class SessionController {
 			}
 		} catch (SQLException e) {
 			jo.put("success", false);
-			ctx.response().setStatusCode(500).end(jo.toString());
+			ctx.response().putHeader("content-type", "application/json; charset=utf-8").setStatusCode(500)
+					.end(jo.toString());
 			ctx.response().close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
